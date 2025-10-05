@@ -1,73 +1,90 @@
-# Welcome to your Lovable project
+🦷 Digital Challenge App
+Flutter Application for Health, AI Radiograph Analysis & Clinic Scheduling
 
-## Project info
+Built for the Digital Challenge 2025 competition.
 
-**URL**: https://lovable.dev/projects/9a1ecf24-6753-4167-82ff-d016d2f298c0
+📱 Overview
 
-## How can I edit this code?
+Digital Challenge App is a Flutter-based Android application that applies digital technologies in health, focusing on:
 
-There are several ways of editing your application.
+🪥 Dental prevention and education
 
-**Use Lovable**
+🤖 AI-based radiograph analysis (demo stage)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9a1ecf24-6753-4167-82ff-d016d2f298c0) and start prompting.
+📅 Digital appointment scheduling
 
-Changes made via Lovable will be committed automatically to this repo.
+The project aims to show how modern technology — from AI image recognition to mobile health apps — can improve daily health awareness and simplify access to medical services.
 
-**Use your preferred IDE**
+🚀 Features
+🦷 Dental Prevention
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Interactive list of dental care tips.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Daily hygiene reminder (“Did you brush today?” quiz).
 
-Follow these steps:
+Friendly UI using icons and cards.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+🤖 AI Radiograph Scanner (Demo)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Upload or capture an X-ray image.
 
-# Step 3: Install the necessary dependencies.
-npm i
+Simple demo logic detects “cavity” or “normal” based on filename.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Includes comments showing where to integrate a real TFLite model (tflite_flutter) for image analysis.
 
-**Edit a file directly in GitHub**
+📅 Clinic Appointments
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Add, view, and delete appointments.
 
-**Use GitHub Codespaces**
+Stores data locally with sqflite.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Optionally sends a demo POST request to https://httpbin.org/post (simulating clinic API).
 
-## What technologies are used for this project?
+🧠 Tech Stack
 
-This project is built with:
+Flutter 3.x
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Dart
 
-## How can I deploy this project?
+SQLite (sqflite) for local data
 
-Simply open [Lovable](https://lovable.dev/projects/9a1ecf24-6753-4167-82ff-d016d2f298c0) and click on Share -> Publish.
+HTTP package for API calls
 
-## Can I connect a custom domain to my Lovable project?
+Image Picker for radiograph uploads
 
-Yes, you can!
+(Optional) TensorFlow Lite (tflite_flutter) for AI integration
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+🏗️ How to Build
+flutter pub get
+flutter build apk --release
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+The generated file will be at:
+build/app/outputs/flutter-apk/app-release.apk
+
+🏆 Competition Context
+
+This project was developed for the Digital Challenge programming competition, under the theme:
+
+“Digital technologies applied in health, environment, and agriculture.”
+
+The app focuses on Health, combining education, AI, and smart connectivity.
+
+👨‍💻 Authors
+
+Ciprian – Developer & Designer
+🧠 Passionate about robotics, programming, and digital innovation.
+
+📂 Repository structure
+/lib
+ ├── main.dart          # App entry point
+/pubspec.yaml           # Dependencies
+/assets/                # Optional images and AI model
+
+💬 Future Improvements
+
+Integrate real AI model for X-ray classification.
+
+Add Firebase backend for online clinic scheduling.
+
+Improve UI/UX with animations and dark mode.
